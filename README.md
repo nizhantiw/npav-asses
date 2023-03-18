@@ -18,6 +18,57 @@ The data fetched will calculate the average of the all data(i.e., score of the t
 
 Caution !!! If certain countary data is not available it will show "Null" and the progress bar will set to 0.
 
+
+## Explaination
+- function CricScore() {
+  const [checkStatus, setCheckStatus] = useState("test");
+  const [country1, setCountry1] = useState("India");
+  const [country2, setCountry2] = useState("Pakistan");
+
+This is a piece of code written in JavaScript language. It defines a function called CricScore that has a few variables and logic inside it.
+
+The function uses a state management tool called useState to store and update the values of variables called checkStatus, country1, and country2.
+
+There is also a variable called data that stores an array of cricket scores. This data is used to display scores for India and Pakistan in this code.
+
+The function also has a useEffect hook that runs when the checkStatus variable changes. If the checkStatus is "server", it will fetch data from an API and update the data variable with the new values.
+
+- function calculateAverage(country) {
+    const matches = data.filter((match) => match[0] === country);
+    const scores = matches.map((match) => match[1]);
+    const averageScore =
+      scores.reduce((total, score) => total + score, 0) / scores.length;
+    return averageScore;
+  }
+
+This is a function called calculateAverage that takes in a parameter called country.
+
+The function uses the data variable defined earlier, which stores an array of cricket scores, to filter out only the matches played by the input country. It does this using the filter() method, which returns a new array of elements that satisfy a certain condition. In this case, it returns all the matches where the first element (index 0) of each sub-array matches the input country.
+
+Then, the function uses the map() method to extract only the scores of the matches played by the input country. The map() method creates a new array with the results of calling a provided function on every element in the array.
+Next, the function uses the reduce() method to sum up all the scores in the scores array, and then divide it by the number of scores to get the average score. The reduce() method reduces an array to a single value by executing a reducer function on each element of the array.Finally, the function returns the average score. So, when this function is called with an input country, it calculates and returns the average score for that country from the data array.
+
+- useEffect(() => {
+    if (checkStatus === "server") {
+      async function fetchData() {
+        try {
+          const response = await fetch(
+            "https://assessments.reliscore.com/api/cric-scores/"
+          );
+          const jsonData = await response.json();
+          setData(jsonData);
+          console.log(data);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+useEffect hook to fetch data from a remote server when the checkStatus variable is set to "server". The useEffect hook is a function that is called automatically by React every time the component is rendered or re-rendered. It allows to execute side-effects, such as fetching data from an API, after the component is mounted or updated. The code inside the useEffect hook defines an asynchronous function called fetchData() that makes an HTTP request to an API endpoint using the fetch() method. The fetch() method returns a promise that resolves to the response from the server. Once the response is received, the code uses the response.json() method to extract the data from the response in JSON format. This data is then passed to the setData() function, which updates the data variable with the new values.
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
