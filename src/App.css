@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,21 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
+
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #999;
+  }
+  
+  .footer a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  }
+  
+  footer a:hover {
+  color: #666;
+  }

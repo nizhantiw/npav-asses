@@ -1,0 +1,76 @@
+.row {
+    clear: both;
+}
+
+.country {
+    float: left;
+    width: 250px;
+    color: rgb(33, 9, 9);
+    font-weight: bold;
+}
+
+.country form {
+    float: left;
+    width: 250px;
+    color: rgb(33, 9, 9);
+    font-weight: bold;
+}
+
+.country .country-input {
+    width: 100px;
+    height: 17px;
+    /* width: 250px; */
+    color: rgb(33, 9, 9);
+    font-weight: bold;
+}
+
+.average {
+    float: left;
+    width: 250px;
+    color: rgb(33, 9, 9);
+    font-weight: bold;
+}
+
+.horiz-bar {
+    float: left;
+    /* display: inline-block; */
+    background-color: rgb(101, 190, 101);
+    /* border-style: none; */
+    /* border-color: rgb(54, 53, 53); */
+    border-radius: 2.5px;
+}
+@media only screen and (min-width: 900px) {
+    .country,
+    .average {
+      width: 250px;
+    }
+  
+    .horiz-bar {
+      width: calc(100% - 500px);
+      margin-left: 10px;
+    }
+  }
+  
+  @media only screen and (min-width: 600px) and (max-width: 899px) {
+    .country,
+    .average {
+      width: 200px;
+    }
+  
+    .horiz-bar {
+      width: calc(100% - 400px);
+      margin-left: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 599px) {
+    .country,
+    .average {
+      width: 100%;
+    }
+  
+    .horiz-bar {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
