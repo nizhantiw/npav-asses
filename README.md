@@ -1,3 +1,24 @@
+# Responsive Dynamic Web Page
+
+This project is developed in response to the placement assignment given by NPAV, Pune.
+
+
+## Demo
+
+https://npav-asses.vercel.app/
+
+
+## Tech-Stack Implemented
+- [ReactJs]
+- [Css]
+- 
+## Features
+When user click on the Radio buttons i.e., "Test Data" and "Server Data", it changes the mode of fetchAPI. when user click on the Test Data it fetched data locally created and displayes to the user on screen. if the user selects "Server Data" it fetched the fetched the data from the API (https: assessments. reliscare.cam/api,'cric-scores) and displayes to the web page.
+The data fetched will calculate the average of the all data(i.e., score of the team) and calculates its average and then the calculated average is diplayed in terms of a horizontal progress bar.
+
+
+Caution !!! If certain countary data is not available it will show "Null" and the progress bar will set to 0.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
